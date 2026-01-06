@@ -1,3 +1,4 @@
+use std::any::TypeId;
 use std::collections::HashMap;
 use std::convert::From;
 use std::intrinsics::{type_id, type_name};
@@ -32,7 +33,7 @@ impl From<ShortTypeId> for u16 {
 
 pub struct TypeRegistry {
     next_short_id: ShortTypeId,
-    long_to_short_ids: HashMap<u64, ShortTypeId>,
+    long_to_short_ids: HashMap<TypeId, ShortTypeId>,
     pub short_ids_to_names: HashMap<ShortTypeId, String>,
 }
 
