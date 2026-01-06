@@ -21,9 +21,7 @@
 
 #![warn(missing_docs)]
 #![feature(core_intrinsics)]
-#![feature(optin_builtin_traits)]
 #![feature(specialization)]
-#![feature(box_syntax)]
 extern crate chunky;
 extern crate compact;
 #[macro_use]
